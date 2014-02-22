@@ -17,6 +17,7 @@ describe "Seattle Sample", :jruby => true do
   end
 
   before(:all) do
+    LockJar.lock
     LockJar.load
     ['Peer',
      'Connection',
