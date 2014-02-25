@@ -100,7 +100,7 @@ describe "Seattle Sample", :jruby => true do
           db = @conn.db
           @results.each do |result|
             entity = db.entity(result[0])
-            neighborhood = entity.get(":community/neighborhood");
+            neighborhood = entity.get(":community/neighborhood")
             puts neighborhood.get(":neighborhood/name")
           end
           binding.pry
@@ -115,7 +115,7 @@ describe "Seattle Sample", :jruby => true do
           neighborhood = community.get(":community/neighborhood")
           communities = neighborhood.get(":community/_neighborhood")
           communities.each do |comm|
-            comm.get(":community/name")
+            puts comm.get(":community/name")
           end
           binding.pry
         end
